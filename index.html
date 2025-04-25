@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificador de Vazamentos</title>
+</head>
+<body>
+  <h1>Verificador de E-mail Vazado</h1>
+  <input type="email" id="email" placeholder="Digite seu e-mail" />
+  <button onclick="verificar()">Verificar</button>
+  <pre id="resultado"></pre>
+
+  <script>
+    async function verificar() {
+      const email = document.getElementById('email').value;
+      const resposta = await fetch(`/api/check-email?email=${email}`);
+      const dados = await resposta.json();
+      document.getElementById('resultado').innerText = JSON.stringify(dados, null, 2);
+    }
+  </script>
+</body>
+</html>
