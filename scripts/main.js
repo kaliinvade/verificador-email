@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Configuração da API
     const API_ENDPOINT = 'https://haveibeenpwned.com/api/v3';
-    const API_KEY = 'YOUR_API_KEY'; // Substitua pela sua chave de API
+    const API_KEY = '1b75f66bf3474e97830c0a3bc16d3643'; // Substitua pela sua chave de API
     
     // Verificar email
     emailForm.addEventListener('submit', async function(e) {
