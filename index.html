@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beeahead | Verificação de Vazamentos</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo-beeahead.png" alt="Beeahead Logo" class="logo">
+            <h1>Beeahead Security</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Verificar Email</a></li>
+                <li><a href="#">Verificar Senha</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section class="hero">
+            <h2>Proteja seus dados online</h2>
+            <p>Verifique se suas informações apareceram em vazamentos de dados conhecidos</p>
+        </section>
+
+        <section class="checker-section">
+            <div class="tab-container">
+                <button class="tab-button active" onclick="openTab('email')">Verificar Email</button>
+                <button class="tab-button" onclick="openTab('password')">Verificar Senha</button>
+            </div>
+
+            <div id="email" class="tab-content active">
+                <form id="emailForm">
+                    <input type="email" id="emailInput" placeholder="Digite seu email" required>
+                    <button type="submit">Verificar</button>
+                </form>
+                <div id="emailResults" class="results"></div>
+            </div>
+
+            <div id="password" class="tab-content">
+                <form id="passwordForm">
+                    <input type="password" id="passwordInput" placeholder="Digite sua senha" required>
+                    <button type="submit">Verificar</button>
+                </form>
+                <div id="passwordResults" class="results"></div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <h3>Como funciona?</h3>
+            <div class="info-cards">
+                <div class="card">
+                    <h4>1. Digite seu email ou senha</h4>
+                    <p>Nós verificamos na base de dados do Have I Been Pwned.</p>
+                </div>
+                <div class="card">
+                    <h4>2. Analisamos os resultados</h4>
+                    <p>Identificamos em quais vazamentos suas informações apareceram.</p>
+                </div>
+                <div class="card">
+                    <h4>3. Recomendações de segurança</h4>
+                    <p>Te ajudamos a proteger suas contas com dicas personalizadas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Beeahead Security. Todos os direitos reservados.</p>
+        <p>Dados fornecidos por <a href="https://haveibeenpwned.com" target="_blank">Have I Been Pwned</a>.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
